@@ -1,4 +1,4 @@
- import CardGrid from "./CardGrid";
+ import CardGrid from "../components/CardGrid";
 
 const Home = () => {
   return (
