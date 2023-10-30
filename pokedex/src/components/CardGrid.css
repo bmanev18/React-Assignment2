@@ -1,0 +1,41 @@
+/* FILEPATH: /c:/Users/Bozhidar Manev/Documents/GitHub/React-Assignment2/pokedex/src/components/CardGrid.css */
+
+.page-container {
+    display: flex;
+    /* set the display property to flex */
+    justify-content: space-between;
+    /* distribute the items evenly along the main axis */
+    align-items: center;
+    /* align the items vertically in the center */
+    /* height: 500px; */
+}
+
+.side-bar {
+    display: flex;
+    /* set the display property to flex */
+    align-items: center;
+    /* align the items vertically in the center */
+    width: 300px;
+    height: 115vh;
+    margin: 10px;
+    border-radius: 10px;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 48px;
+}
+
+.side-bar:hover {
+    background-color: rgb(179, 179, 179);
+    font-size: 60px;
+    transition: font-size 0.4s ease-in-out;
+    /* add a transition effect to the font-size property */
+}
+
+.cardGrid {
+    display: flex;
+    /* set the display property to flex */
+    flex-wrap: wrap;
+    /* allow the items to wrap to the next line if there's not enough space */
+    justify-content: center;
+    /* center the items horizontally */
+}
