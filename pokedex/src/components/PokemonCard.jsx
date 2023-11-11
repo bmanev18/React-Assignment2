@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
-import "./PokemonCard.css";
-import { colorVariantConverter } from "../utils/Extra";
+import "../components-style/PokemonCard.css";
+import { colorVariantConverter } from "../utils/code/Extra";
+import Popup from "../utils/code/PopUpComponenet";
 
-const PokemonCard = ({ url, onSelect }) => {
+const PokemonCard = ({ url }) => {
   const [pokemon, setPokemon] = useState(null);
+  const [selectedPokemon, setSelectedPokemon] = useState(null);
 
   useEffect(() => {
     fetch(url)
@@ -14,12 +16,19 @@ const PokemonCard = ({ url, onSelect }) => {
   const colorVariant =
     pokemon && colorVariantConverter(pokemon.types[0].type.name);
 
+  const togglePopup = () => {
+    console.log("togglePopup");
+    setSelectedPokemon(selectedPokemon ? null : pokemon);
+  };
+
   return (
     <>
       {pokemon && (
         <div
           className="card"
-          onClick={() => onSelect(pokemon)}
+          onClick={() => {
+            togglePopup();
+          }}
           style={colorVariant ? { backgroundColor: colorVariant } : {}}
         >
           <div className="pokeInfo">
@@ -34,6 +43,26 @@ const PokemonCard = ({ url, onSelect }) => {
           </div>
         </div>
       )}
+      {selectedPokemon && renderPopUp({ pokemon, togglePopup })}
+    </>
+  );
+};
+
+const renderPopUp = ({ pokemon, togglePopup }) => {
+  return (
+    <>
+      <Popup
+        content={
+          <div className="pokemon-card">
+            <img src={pokemon.sprites.front_default} alt={pokemon.name} />
+            <h2>{pokemon.name}</h2>
+            <p>Height: {pokemon.height}</p>
+            <p>Weight: {pokemon.weight}</p>
+            <p>Type: {pokemon.types[0].type.name}</p>
+          </div>
+        }
+        handleClose={togglePopup}
+      />
     </>
   );
 };

@@ -1,9 +1,9 @@
- import CardGrid from "../components/CardGrid";
+import CardGrid from "../components/CardGrid";
 
 const Home = () => {
   return (
     <div className="grid">
-      {<CardGrid />}
+      <CardGrid />
     </div>
   );
 };

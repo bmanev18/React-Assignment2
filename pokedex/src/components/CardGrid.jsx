@@ -1,9 +1,11 @@
-import CardPageActions from "../utils/CardPageActions";
+import CardPageActions from "../utils/code/CardPageActions";
 import PokemonCard from "./PokemonCard";
-import "./CardGrid.css";
+import "../components-style/CardGrid.css";
+import { useState } from "react";
+import Popup from "../utils/code/PopUpComponenet";
 
-const CardGrid = ({ onSelect }) => {
-// Context can be implemented
+const CardGrid = () => {
+  // Context can be implemented
   const {
     pokemonData,
     handleNextPage,
@@ -21,9 +23,6 @@ const CardGrid = ({ onSelect }) => {
             {"<"}
           </div>
         )}
-        {/* <div className="side-bar" onClick={() => handlePreviousPage()}>
-          {"<"}
-        </div> */}
         <div
           className="cardGrid"
           style={previousPageData ? {} : { marginLeft: "80px" }}
@@ -32,7 +31,6 @@ const CardGrid = ({ onSelect }) => {
             <PokemonCard
               url={pokemon.url}
               key={pokemon.name}
-              onSelect={onSelect}
             />
           ))}
         </div>
@@ -41,18 +39,11 @@ const CardGrid = ({ onSelect }) => {
             {">"}
           </div>
         )}
-        {/* <div className="gridControls">
-          {pageNumber}
-          <div className="pageButtonsContainer">
-            {previousPageData && (
-              <button onClick={onPreviousPage}>Previous</button>
-            )}
-            {nextPageData && <button onClick={onNextPage}>Next</button>}
-          </div>
-        </div> */}
       </div>
     </>
   );
 };
+
+
 
 export default CardGrid;
