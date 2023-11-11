@@ -1,0 +1,30 @@
+.about-background {
+    background-image: url('../utils/img/about.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    /* background: #f4f4f4; */
+    color: #333;
+    font-family: Arial, sans-serif;
+    text-align: left;
+    padding-left: 20%;
+}
+
+.about-background h1 {
+    font-family: 'PokemonSolid';
+    font-size: 5em;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.about-background p {
+    font-size: 1.2em;
+    /* max-width: 800px; */
+    /* margin: 0 auto; */
+}

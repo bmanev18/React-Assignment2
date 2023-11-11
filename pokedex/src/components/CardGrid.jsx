@@ -12,7 +12,6 @@ const CardGrid = () => {
     handlePreviousPage,
     nextPageData,
     previousPageData,
-    pageNumber,
   } = CardPageActions();
 
   return (

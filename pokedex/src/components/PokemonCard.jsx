@@ -43,7 +43,8 @@ const PokemonCard = ({ url }) => {
           </div>
         </div>
       )}
-      {selectedPokemon && renderPopUp({ pokemon, togglePopup })}
+      {/* {selectedPokemon && renderPopUp({ pokemon, togglePopup })} */}
+      {selectedPokemon && <Popup content={pokemon} handleClose={togglePopup} />}
     </>
   );
 };
@@ -51,18 +52,7 @@ const PokemonCard = ({ url }) => {
 const renderPopUp = ({ pokemon, togglePopup }) => {
   return (
     <>
-      <Popup
-        content={
-          <div className="pokemon-card">
-            <img src={pokemon.sprites.front_default} alt={pokemon.name} />
-            <h2>{pokemon.name}</h2>
-            <p>Height: {pokemon.height}</p>
-            <p>Weight: {pokemon.weight}</p>
-            <p>Type: {pokemon.types[0].type.name}</p>
-          </div>
-        }
-        handleClose={togglePopup}
-      />
+      <Popup content={pokemon} handleClose={togglePopup} />
     </>
   );
 };
