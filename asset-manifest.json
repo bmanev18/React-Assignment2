@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/React-Assignment2/static/css/main.ab0d3c0d.css",
-    "main.js": "/React-Assignment2/static/js/main.d4be70c3.js",
+    "main.js": "/React-Assignment2/static/js/main.8524b9f3.js",
     "static/media/about.jpg": "/React-Assignment2/static/media/about.88396a89f774bde0b8b7.jpg",
     "static/media/poke_background.jpg": "/React-Assignment2/static/media/poke_background.c4972c951f328f65f0f9.jpg",
     "static/media/PokemonHollow.ttf": "/React-Assignment2/static/media/PokemonHollow.47f77ce9939c5330492b.ttf",
@@ -10,10 +10,10 @@
     "static/media/PokemonSolid.ttf": "/React-Assignment2/static/media/PokemonSolid.5d60be1f7ff5fcc21fc1.ttf",
     "index.html": "/React-Assignment2/index.html",
     "main.ab0d3c0d.css.map": "/React-Assignment2/static/css/main.ab0d3c0d.css.map",
-    "main.d4be70c3.js.map": "/React-Assignment2/static/js/main.d4be70c3.js.map"
+    "main.8524b9f3.js.map": "/React-Assignment2/static/js/main.8524b9f3.js.map"
   },
   "entrypoints": [
     "static/css/main.ab0d3c0d.css",
-    "static/js/main.d4be70c3.js"
+    "static/js/main.8524b9f3.js"
   ]
 }
