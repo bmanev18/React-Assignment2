@@ -1,8 +1,6 @@
 import CardPageActions from "../utils/code/CardPageActions";
 import PokemonCard from "./PokemonCard";
 import "../components-style/CardGrid.css";
-import { useState } from "react";
-import Popup from "../utils/code/PopUpComponenet";
 
 const CardGrid = () => {
   // Context can be implemented
