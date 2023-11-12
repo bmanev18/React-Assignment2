@@ -6,7 +6,8 @@ const About = () => {
     <>
       <div className="about-background">
         <h1>About</h1>
-        <p>This is the About page</p>
+        <h3>Welcome to Pokedex!</h3>
+        <p>All you are looking for about pokemons is here!</p>
       </div>
     </>
   );
