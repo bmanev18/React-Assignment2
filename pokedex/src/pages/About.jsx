@@ -1,4 +1,4 @@
-import "./About.css";
+import "../components-style/About.css";
 
 const About = () => {
 
